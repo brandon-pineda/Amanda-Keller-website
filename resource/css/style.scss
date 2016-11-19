@@ -26,22 +26,33 @@ html, body {
     text-align: right;
     font-family: $georgia;
     padding-top: 1vh;
-    font-size: 1.1em;
     @include media($mobile) {
         @include span-columns(4);
-        padding-right: 1em;
-    };
+    }
+
     li {
         list-style-type: none;
         display: inline;
         padding-right: 1.5em;
+        font-size: 1.1em;
         :last-child {
             padding-right: 0;
         }
+
         @include media($mobile) {
             display: none;
+            text-align: center;
+            font-size: 2em;
+            padding-bottom: 0.5em;
         }
     }
+    li:last-child {
+        @include media($mobile) {
+            padding-bottom: 0;
+        }
+    }
+
+
     a {
         text-decoration: none;
         color: white;
@@ -49,11 +60,16 @@ html, body {
     a:hover {
         color: black;
     }
+
     #mobile-nav-icon {
         display: none;
         @include media($mobile) {
             display: block;
-            font-size: 3em;
+            font-size: 3.5em;
+            padding-right: .2em;
+        }
+        :hover {
+            color: white;
         }
     }
 }
@@ -67,7 +83,7 @@ html, body {
     font-weight: normal;
     font-size: 3em;
     @include media($mobile) {
-        padding-top: 10vh;
+        padding-top: 5vh;
     }
 }
 
