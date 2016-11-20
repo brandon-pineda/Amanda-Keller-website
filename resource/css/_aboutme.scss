@@ -1,0 +1,32 @@
+//about me section//
+#about-me-container {
+    @include outer-container(100%);
+    text-align: center;
+
+    h1 {
+        @include span-columns(12);
+        font-family: 'Pacifico', cursive;
+        font-weight: normal;
+        font-size: 3em;
+        background: $pink-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    img {
+        @include row();
+        margin: auto;
+        border-radius: 50%;
+    }
+
+    p {
+        @include span-columns(6);
+        @include shift(3);
+        font-family: $georgia;
+        font-size: 1.1em;
+        @include media($mobile) {
+            @include span-columns(3.8);
+            @include shift(.1);
+        }
+    }
+}

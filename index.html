@@ -19,16 +19,18 @@
                 <a id="mobile-nav-icon"><i class="fa fa-bars" aria-hidden="true"></i></i>
                 <ul>
                   <li><a href="#about-me-container">about me</a></li>
-                  <li><a href="#portfolio">portfolio</a></li>
-                  <li><a href="#contact-me">contact me</a></li>
+                  <li><a href="#portfolio-container">portfolio</a></li>
+                  <li><a href="#contact-me-container">contact me</a></li>
               </ul>
             </nav>
 
             <h1 id="intro-name">Amanda Keller</h1>
             <h2 id="intro-description">hair stylist & makeup artist</h2>
-            <a id ="intro-instagram-icon" href="https://www.instagram.com/amandapaints2468/">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
+            <div id="intro-instagram-wrapper">
+                <a id ="intro-instagram-icon" href="https://www.instagram.com/amandapaints2468/">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
 
         <section id="about-me-container">
@@ -46,6 +48,20 @@
                   t vel finibus vehicula. Nam efficitur ipsum id pellentesque bibendum.
                   Etiam arcu magna, eleifend vitae lacinia et, aliquam vel nunc.
               </p>
+        </section>
+
+        <!-- <section id="portfolio-container">
+        </section> -->
+
+        <section id="contact-me-container">
+            <h1>Contact Me</h1>
+            <form  class="form" action="mailto:amandapawstuh2468@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Your name" required><br>
+                <input type="text" name="_replyto" placeholder="Your email" required><br>
+                <textarea name="message" rows="4" placeholder="Your message" required></textarea><br>
+                <input type="submit" value="Send">
+                <!-- <input type="text" name="_gotcha" style="display:none" /> -->
+            </form>
         </section>
     </body>
 </html>
