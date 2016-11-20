@@ -20,6 +20,13 @@ $pink-gradient: linear-gradient(90deg, #ff99bb, #ffccdd);
     padding-top: 1vh;
     @include media($mobile) {
         @include span-columns(4);
+        position: absolute;
+    }
+
+    ul {
+        @include media($mobile) {
+            margin-top: 0;
+        }
     }
 
     li {
@@ -34,7 +41,7 @@ $pink-gradient: linear-gradient(90deg, #ff99bb, #ffccdd);
         @include media($mobile) {
             display: none;
             text-align: center;
-            font-size: 2em;
+            font-size: 1.1em;
             padding-bottom: 0.5em;
         }
     }
@@ -72,7 +79,7 @@ $pink-gradient: linear-gradient(90deg, #ff99bb, #ffccdd);
     font-weight: normal;
     font-size: 3em;
     @include media($mobile) {
-        padding-top: 5vh;
+        padding-top: 20vh;
     }
 }
 
@@ -99,7 +106,7 @@ $pink-gradient: linear-gradient(90deg, #ff99bb, #ffccdd);
     padding-bottom: 5vh;
     @include media($mobile) {
         padding-top:0.5em;
-        font-size: 6em;
+        font-size: 4em;
     };
     :hover {
         color: black;
