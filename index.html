@@ -55,10 +55,12 @@
 
         <section id="contact-me-container">
             <h1>Contact Me</h1>
-            <form  class="form" action="mailto:bppsparton8@gmail.com" method="post" enctype="text/plain">
+            <form  class="form" action="https://formspree.io/bppsparton@gmail.com" method="POST">
                 <input type="text" name="name" placeholder="Your name" required><br>
                 <input type="text" name="_replyto" placeholder="Your email" required><br>
                 <textarea name="message" rows="4" placeholder="Your message" required></textarea><br>
+                <!-- <input type="hidden" name="_subject" value="From Personal Website" /> -->
+                <input type="text" name="_gotcha" style="display:none" />
                 <input type="submit" value="Send">
             </form>
         </section>
