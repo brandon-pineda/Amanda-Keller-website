@@ -6,7 +6,7 @@ $pink-gradient: linear-gradient(90deg, #ff99bb, #ffccdd);
     @include background(linear-gradient(90deg, #ff99bb, #ffccdd) left repeat);
     color: white;
     text-align: center;
-    @include media($mobile) {
+    @include media(max-width 480px) {
         height: 100vh;
     }
 }
