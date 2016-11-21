@@ -1,0 +1,20 @@
+#portfolio-container {
+    @include outer-container(100%);
+    text-align: center;
+
+    h1 {
+        @include h1-style();
+        background: $pink-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    img {
+        @include span-columns(3);
+        @include omega();
+
+        @include media($mobile) {
+            @include span-columns(4);
+        }
+    }
+}

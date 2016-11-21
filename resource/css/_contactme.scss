@@ -5,9 +5,7 @@
 
     h1 {
         @include span-columns(12);
-        font-family: 'Pacifico', cursive;
-        font-weight: normal;
-        font-size: 3em;
+        @include h1-style();
         color: white;
         }
 
