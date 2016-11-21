@@ -73,12 +73,8 @@ $pink-gradient: linear-gradient(90deg, #ff99bb, #ffccdd);
     }
 }
 
-#fixed {
-    position: fixed;
+.fixed {
     background-color: rgba(255,204,221, 0.8);
-    @include media($mobile) {
-        position: fixed;
-    }
 }
 
 

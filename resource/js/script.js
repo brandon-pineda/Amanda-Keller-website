@@ -18,11 +18,27 @@ $(document).ready(function() {
         $('#portfolio-container').append('<img src="resource/img/amanda/' + i + '.jpg">');
     };
 
+    var position = $('#intro-container nav').css('position');
     $(window).bind('scroll', function () {
-    if ($(window).scrollTop() > 340) {
-        $('#intro-container nav').attr('id' , 'fixed');
-    } else {
-        $('#intro-container nav').removeAttr('id');
-    }
+        if ($(window).scrollTop() > 340) {
+            $('#intro-container nav').addClass('fixed');
+            $('#intro-container nav').css('position', 'fixed');
+        } else {
+            $('#intro-container nav').removeClass('fixed');
+            $('#intro-container nav').css('position', position);
+
+        }
+    });
+
+    $(window).resize(function() {
+        var w = $(window).width();
+        var menu = $('#intro-container nav li');
+        if (w > 800 && menu.is(':hidden')) {
+            menu.css('display','block');
+            $('#intro-container nav li').css('display', 'inline');
+        } else if (w < 800 && menu.is(':visible'))  {
+            // menu.css('display','none');
+            $('#intro-container nav li').css('display', 'none');
+        }
     });
 });
