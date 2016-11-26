@@ -17,7 +17,8 @@ $(document).ready(function() {
 
     //for loop to easily add all photos
     for(i=1;i<=20;i++) {
-        $('#portfolio-container').append('<img src="resource/img/amanda/' + i + '.jpg">');
+        $('#portfolio-container section').append
+            ('<a href="resource/img/amanda/' + i + '.jpg"><img src="resource/img/amanda/' + i + '.jpg"></a>');
     };
 
     //nav responds properly when resizing from mobile to desktop screen size
@@ -29,7 +30,7 @@ $(document).ready(function() {
         }
     });
 
-    $('.portfolio-container').magnificPopup({
+    $('#portfolio-container').magnificPopup({
         delegate: 'a',
         type: 'image',
         tLoading: 'Loading image #%curr%...',
