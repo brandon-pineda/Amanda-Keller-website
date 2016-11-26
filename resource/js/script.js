@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $('#mobile-nav-icon').click(function(){
-        var navList = $('#intro-container nav li');
+        var navList = $('#intro-container nav ul');
         var icon = $('#mobile-nav-icon i');
 
         navList.toggle();
@@ -18,29 +18,11 @@ $(document).ready(function() {
         $('#portfolio-container').append('<img src="resource/img/amanda/' + i + '.jpg">');
     };
 
-    $('#intro-container nav').scrollspy();
-
-    // var position = $('#intro-container nav').css('position');
-    // $(window).bind('scroll', function () {
-    //     if ($(window).scrollTop() > 340) {
-    //         $('#intro-container nav').addClass('fixed');
-    //         $('#intro-container nav').css('position', 'fixed');
-    //     } else {
-    //         $('#intro-container nav').removeClass('fixed');
-    //         $('#intro-container nav').css('position', position);
-    //
-    //     }
-    // });
-
     $(window).resize(function() {
         var w = $(window).width();
-        var menu = $('#intro-container nav li');
+        var menu = $('#intro-container nav ul');
         if (w > 800 && menu.is(':hidden')) {
-            menu.css('display','block');
-            $('#intro-container nav li').css('display', 'inline');
-        } else if (w < 800 && menu.is(':visible'))  {
-            // menu.css('display','none');
-            $('#intro-container nav li').css('display', 'none');
+            menu.removeAttr('style');
         }
     });
 });
