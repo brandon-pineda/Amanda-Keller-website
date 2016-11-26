@@ -9,12 +9,21 @@
         -webkit-text-fill-color: transparent;
     }
 
-    img {
-        @include span-columns(3);
-        @include omega();
+    a {
+        @include span-columns(3, block);
+        @include omega(4n);
+
 
         @include media($mobile) {
             @include span-columns(4);
+        }
+
+        @include media(min-width 480px max-width 768px 4) {
+            @include span-columns(2, block);
+            @include omega(2n);
+        }
+        img {
+            width: 100%;
         }
     }
 }
