@@ -9,7 +9,7 @@ var script = (function(){
     //bind events
     $icon.on('click', toggleNav)
     $window.on('resize', responsiveNavResize)
-    RunMagnificPopup($portfolio);
+    RunMagnificPopup($portfolio)
     // nothing needs to be rendered for now
     // _render()
     //
@@ -28,9 +28,9 @@ var script = (function(){
     }
 
     function responsiveNavResize(){
-        var w = $window.width();
+        var w = $window.width()
         if (w > 800 && $navList.is(':hidden')) {
-            $navList.removeAttr('style');
+            $navList.removeAttr('style')
         }
     }
 
