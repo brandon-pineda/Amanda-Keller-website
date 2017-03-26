@@ -13,8 +13,13 @@
 
     img {
         @include row();
-        margin: auto;
         border-radius: 50%;
+        height: 480px;
+        margin: auto;
+
+        @include media($mobile) {
+            height: 320px;
+        }
     }
 
     p {
